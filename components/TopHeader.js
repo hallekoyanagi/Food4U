@@ -11,13 +11,14 @@ import { styles } from '../style/styles';
 function TopHeader({ navigation }) {
 
   const { height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <View style={styles.logo_container}>
       <Pressable onPress={() => {auth.currentUser === null ? navigation.navigate("SignIn"):navigation.navigate("Home")}}>
         <Image
           style={[styles.logo, {height: height * 0.12}]}
-          source = {require("../assets/logo.jpg")}
+          source = {require("../assets/logo.png")}
           resizeMode="contain"
         />
       </Pressable>

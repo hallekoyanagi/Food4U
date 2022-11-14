@@ -49,6 +49,10 @@ const Home = () => {
          onPress={signOutPressed}
          buttonText="Sign Out"
         />
+        <Button
+         onPress={signOutPressed}
+         buttonText="Find a Store Near Me"
+        />
       </View>
     </View>
   );
