@@ -1,67 +1,89 @@
 import { Text, View, useWindowDimensions, Alert, SafeAreaView, ScrollView } from 'react-native';
 import React, { useState } from 'react';
-import InputValue from './InputValue';
-import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
-import { auth } from '../Database/firebase';
 import TopHeader from '../components/TopHeader';
 import { styles } from '../style/styles';
+import FoodFactory from './FoodFactory';
 
 // import { breadList } from "../Database/product-firebase-content.js";
 
-const SignIn = () => {
+const Food = () => {
   const {height} = useWindowDimensions();
-
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
 
   const navigation = useNavigation();
 
-  const signInPressed = () => {
-
-  }
-
-  const signUpPressed = () => {
-    navigation.navigate('SignUp');
-  }
-
-  const forgetPasswardPressed = () => {
-    navigation.navigate('ResetPassword');
-  }
+  const food_list = [
+    {
+    name: "Baguette",
+    price: 7,
+    availability: 80,
+    type: "bread"
+    },
+    {
+    name: "Sourdough",
+    price: 5,
+    availability: 99,
+    type: "bread"
+    },
+    {
+    name: "Brioche",
+    price: 5,
+    availability: 80,
+    type: "bread"
+    },
+    {
+    name: "Focaccia",
+    price: 8,
+    availability: 87,
+    type: "bread"
+    },
+    {
+    name: "Ciabatta",
+    price: 74,
+    availability: 50,
+    type: "bread"
+    },
+    {
+    name: "Rye Bread",
+    price: 7,
+    availability: 0,
+    type: "bread"
+    },
+    {
+    name: "Multigrain",
+    price: 4,
+    availability: 30,
+    type: "bread"
+    },
+    {
+    name: "Rye Bread",
+    price: 10,
+    availability: 100,
+    type: "Pita"
+    }];
   
   return (
     <View style={styles.container}>
-      <TopHeader navigation={navigation} />
-      <View style={styles.title_container}>
-        <Text style={[styles.title, {height: height * 0.3}]}>Food</Text>
-      </View>
+        <TopHeader navigation={navigation} />
+        <View style={styles.foodTitleContainer}>
+            <Text style={[styles.title, {height: height * 0.3}]}>Food</Text>
+        </View>
 
-      {/* <View style={styles.middle_container}>
-        <SafeAreaView>
-            <ScrollView
-              style={styles.scrollView}
-              contentContainerStyle={styles.scrollViewOtherResourcePageContainer}>
-                {breadList.map((item) => (
-                    <View key={item.key}>
-                        <Pressable
-                            style={ styles.itemButton }
-                            onPress={() =>
-                            navigation.navigate("Home")
-                            }
-                        >
-                            <Text
-                            style={ styles.buttonText }
-                            >
-                                {item.value}
-                            </Text>
-                        </Pressable>
-                    </View>
-                ))}
-            </ScrollView>
-        </SafeAreaView>
-      </View> */}
+        <View style={styles.foodMiddleContainer}>
+            <SafeAreaView>
+                <ScrollView style={styles.scrollView}>
+                    {food_list.map(food => (
+                        <FoodFactory
+                            name={food.name}
+                            type={food.type}
+                            price={food.price}
+                            availability={food.availability}/>
+                    ))}
+                </ScrollView>
+            </SafeAreaView>
+        </View>
     </View>
   );
 };
 
-export default SignIn;
+export default Food;

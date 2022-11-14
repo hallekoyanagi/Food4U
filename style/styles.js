@@ -16,9 +16,13 @@ export const styles = StyleSheet.create({
         padding: 20,
     },
     title_container: {
-        alignItems: 'center',
-        // justifyContent: 'center',
-        marginTop: -50,
+        flexDirection: "row",
+        height: height*0.15,
+        backgroundColor: "",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: height*0.01,
+        marginBottom: height*0.01,
     },
     middle_container: {
         alignItems: 'center',
@@ -28,7 +32,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 10,
         marginVertical: 5,
         borderRadius: 20,
-        marginTop: -150,
+        marginTop: -height*0.15,
     },
     button_container: {
         alignItems: 'center',
@@ -79,8 +83,9 @@ export const styles = StyleSheet.create({
         maxHeight: 200,
         maxWidth: 300,
         marginRight: 20,
+        marginTop: height * 0.015,
         marginBottom: 50,
-        marginLeft: 20,
+        marginLeft: width * 0.2,
         alignItems: "center",
         justifyContent: "center",
     },
@@ -105,6 +110,15 @@ export const styles = StyleSheet.create({
         backgroundColor: '#00BFFF',
         marginVertical: 5,
         height: 45,
+    },
+    create_button_container_foodNameButton: {
+        marginTop: 10,
+        backgroundColor: '#00BFFF',
+        marginVertical: 5,
+        width: 310,
+        height: "auto",
+        alignItems: "center",
+        justifyContent: "center",
     },
     create_button_container_findStoreButton: {
         backgroundColor: '#fc4736',
@@ -131,6 +145,9 @@ export const styles = StyleSheet.create({
     button_text_foodButton: {
         color: 'white',
     },
+    button_text_foodNameButton: {
+        color: 'white',
+    },
     button_text_findStoreButton: {
         color: 'white',
     },
@@ -140,5 +157,35 @@ export const styles = StyleSheet.create({
     button_text_tertiaryButton: {
         color: '#7BB055',
         fontSize: 15,
+    },
+
+    foodTitleContainer: {
+        marginTop: height*0.01,
+        flexDirection: "row",
+        height: height*0.15,
+        backgroundColor: "",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: -height*0.1,
+    },
+    foodMiddleContainer: {
+        marginBottom: 100,
+        flexDirection: "column",
+        height: height*0.7,
+        justifyContent: "space-between",
+       
+        marginLeft: "2%",
+    },
+
+    /* Scoll View */
+    scrollView: {
+        height: 50,
+        width: '100%',
+        alignSelf: 'center',
+        marginBottom: 100
+    },
+    scrollViewContentContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 })
