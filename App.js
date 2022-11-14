@@ -9,6 +9,7 @@ import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
 import ResetPassword from './screens/ResetPassword';
 import Home from './screens/Home';
+import Map from './screens/Map';
 import Food from './screens/Food';
 
 // Ingore warning
@@ -41,6 +42,7 @@ export default function App() {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="Food" component={Food} />
+        <Stack.Screen name="Map" component={Map} />
       </Stack.Navigator>
     </NavigationContainer>
   );

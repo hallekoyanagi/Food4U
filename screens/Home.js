@@ -35,11 +35,15 @@ const Home = () => {
     })
     .catch(error => alert(error.message));
   }
+  const findStorePressed = () => {
+      navigation.navigate("Map")
+      //.catch(error => alert(error.message));
+  }
 
   const foodPressed = () => {
     navigation.navigate("Food");
   }
-  
+
   return (
 
     <View style={styles.container}>
@@ -62,6 +66,8 @@ const Home = () => {
         <Button
          onPress={signOutPressed}
          buttonText="Sign Out"
+         onPress={findStorePressed}
+         buttonText="Find a Store Near Me"
         />
       </View>
     </View>
