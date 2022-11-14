@@ -35,6 +35,10 @@ const Home = () => {
     })
     .catch(error => alert(error.message));
   }
+
+  const foodPressed = () => {
+    navigation.navigate("Food");
+  }
   
   return (
 
@@ -46,12 +50,18 @@ const Home = () => {
       <Text style={{fontSize: 20}}>Hello {name.firstName}!</Text>
       <View style={styles.button_container}>
         <Button
-         onPress={signOutPressed}
-         buttonText="Sign Out"
+         onPress={foodPressed}
+         buttonText="Food"
+         buttonType="foodButton"
         />
         <Button
          onPress={signOutPressed}
          buttonText="Find a Store Near Me"
+         buttonType="findStoreButton"
+        />
+        <Button
+         onPress={signOutPressed}
+         buttonText="Sign Out"
         />
       </View>
     </View>

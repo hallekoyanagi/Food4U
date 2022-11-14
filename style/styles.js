@@ -101,6 +101,16 @@ export const styles = StyleSheet.create({
         marginVertical: 5,
         height: 45,
     },
+    create_button_container_foodButton: {
+        backgroundColor: '#00BFFF',
+        marginVertical: 5,
+        height: 45,
+    },
+    create_button_container_findStoreButton: {
+        backgroundColor: '#fc4736',
+        marginVertical: 5,
+        height: 45,
+    },
     create_button_container_secondaryButton: {
         borderColor: '#7BB055',
         borderWidth: 2,
@@ -116,6 +126,12 @@ export const styles = StyleSheet.create({
         fontSize: 17,
     },
     button_text_primaryButton: {
+        color: 'white',
+    },
+    button_text_foodButton: {
+        color: 'white',
+    },
+    button_text_findStoreButton: {
         color: 'white',
     },
     button_text_secondaryButton: {
