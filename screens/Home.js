@@ -37,7 +37,6 @@ const Home = () => {
   }
   const findStorePressed = () => {
       navigation.navigate("Map")
-      //.catch(error => alert(error.message));
   }
 
   const foodPressed = () => {

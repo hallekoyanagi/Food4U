@@ -5,7 +5,25 @@ import Button from './Button';
 import { auth } from '../Database/firebase';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-import { styles } from '../style/styles';
+//import { style } from '../style/styles';
+import { ImageBackground, StyleSheet} from "react-native";
+import image from '../assets/map.png'; // Tell webpack this JS file uses this image
+
+const App = () => (
+  <View style={styles.container}>
+    <ImageBackground source={image} resizeMode="cover" style={styles.image}/>
+  </View>
+);
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center"
+  },
+});
 
 const Map = () => {
   const {height} = useWindowDimensions();
@@ -14,32 +32,13 @@ const Map = () => {
 
   const navigation = useNavigation();
 
-  const enterPressed = () => {
-    navigation.navigate('Map', {username: username});
-    //.catch(error => alert(error.message));
-  }
-
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
-      <View style={styles.title_container}>
-        <Text style={[styles.title, {height: height * 0.3}]}>Map</Text>
-      </View>
-
-      <View style={styles.middle_container}>
-        <InputValue
-         value={username}
-         setValue={setUsername}
-         placeholder="Search..."
-        />
-      </View>
-
-      <View style={styles.button_container}>
-        <Button
-         onPress={enterPressed}
-         buttonText="Enter"
-        />
-      </View>
+      <Button
+        buttonText="Filter"
+      />
+      <App navigation={navigation} />
     </View>
   );
 };
