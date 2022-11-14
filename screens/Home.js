@@ -4,8 +4,11 @@ import InputValue from './InputValue';
 import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
+import HelpButton from '../components/HelpButton';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
+
+import Modal from '../components/Modal';
 
 const Home = () => {
   const navigation = useNavigation();
@@ -34,8 +37,12 @@ const Home = () => {
   }
   
   return (
+
     <View style={styles.container}>
+
       <TopHeader navigation={navigation} />
+      <HelpButton navigation={navigation} />
+
       <Text style={{fontSize: 20}}>Hello {name.firstName}!</Text>
       <View style={styles.button_container}>
         <Button
