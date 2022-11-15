@@ -9,7 +9,13 @@ import TopHeader from '../components/TopHeader';
 import { ImageBackground, StyleSheet} from "react-native";
 import image from '../assets/map.png'; // Tell webpack this JS file uses this image
 
-const App = () => (
+
+
+
+
+
+
+const Background = () => (
   <View style={styles.container}>
     <ImageBackground source={image} resizeMode="cover" style={styles.image}/>
   </View>
@@ -38,7 +44,7 @@ const Map = () => {
       <Button
         buttonText="Filter"
       />
-      <App navigation={navigation} />
+      <Background navigation={navigation} />
     </View>
   );
 };

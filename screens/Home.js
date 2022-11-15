@@ -8,8 +8,6 @@ import HelpButton from '../components/HelpButton';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
-import Modal from '../components/Modal';
-
 const Home = () => {
   const navigation = useNavigation();
 
