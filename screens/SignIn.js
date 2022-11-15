@@ -46,7 +46,7 @@ const SignIn = () => {
     navigation.navigate('SignUp');
   }
 
-  const forgetPasswardPressed = () => {
+  const forgetPasswordPressed = () => {
     navigation.navigate('ResetPassword');
   }
   
@@ -82,8 +82,8 @@ const SignIn = () => {
          buttonType="tertiaryButton"
         />
         <Button
-         onPress={forgetPasswardPressed}
-         buttonText="Forget your passward?"
+         onPress={forgetPasswordPressed}
+         buttonText="Forget your password?"
          buttonType="tertiaryButton"
         />
       </View>
