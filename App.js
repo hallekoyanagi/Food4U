@@ -20,7 +20,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 export default function App() {
   // For Navigation
-  const [show, setShow] = useState(0);
   const Stack = createNativeStackNavigator();
 
   LogBox.ignoreAllLogs();
