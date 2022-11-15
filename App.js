@@ -11,7 +11,7 @@ import ResetPassword from './screens/ResetPassword';
 import Home from './screens/Home';
 import Map from './screens/Map';
 import Food from './screens/Food';
-
+import StorePage from './screens/StorePage';
 // Ignore warning
 import { LogBox } from 'react-native';
 import SearchedMap from './screens/SearchedMap';
@@ -46,6 +46,7 @@ export default function App() {
         <Stack.Screen name="Map" component={Map} />
         <Stack.Screen name="SearchedMap" component={SearchedMap} />
         <Stack.Screen name="Search" component={Search} />
+        <Stack.Screen name="StorePage" component={StorePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
