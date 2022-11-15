@@ -56,15 +56,13 @@ const Home = () => {
          buttonType="foodButton"
         />
         <Button
-         onPress={signOutPressed}
+         onPress={findStorePressed}
          buttonText="Find a Store Near Me"
          buttonType="findStoreButton"
         />
         <Button
          onPress={signOutPressed}
          buttonText="Sign Out"
-         onPress={findStorePressed}
-         buttonText="Find a Store Near Me"
         />
       </View>
     </View>
