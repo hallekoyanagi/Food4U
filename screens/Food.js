@@ -14,52 +14,52 @@ const Food = () => {
 
   const food_list = [
     {
-    name: "Baguette",
-    price: 7,
-    availability: 80,
-    type: "bread"
+      name: "Baguette",
+      price: 7,
+      availability: 80,
+      type: "bread"
     },
     {
-    name: "Sourdough",
-    price: 5,
-    availability: 99,
-    type: "bread"
+      name: "Sourdough",
+      price: 5,
+      availability: 99,
+      type: "bread"
     },
     {
-    name: "Brioche",
-    price: 5,
-    availability: 80,
-    type: "bread"
+      name: "Brioche",
+      price: 5,
+      availability: 80,
+      type: "bread"
     },
     {
-    name: "Focaccia",
-    price: 8,
-    availability: 87,
-    type: "bread"
+      name: "Focaccia",
+      price: 8,
+      availability: 87,
+      type: "bread"
     },
     {
-    name: "Ciabatta",
-    price: 74,
-    availability: 50,
-    type: "bread"
+      name: "Ciabatta",
+      price: 74,
+      availability: 50,
+      type: "bread"
     },
     {
-    name: "Rye Bread",
-    price: 7,
-    availability: 0,
-    type: "bread"
+      name: "Rye Bread",
+      price: 7,
+      availability: 0,
+      type: "bread"
     },
     {
-    name: "Multigrain",
-    price: 4,
-    availability: 30,
-    type: "bread"
+      name: "Multigrain",
+      price: 4,
+      availability: 30,
+      type: "bread"
     },
     {
-    name: "Rye Bread",
-    price: 10,
-    availability: 100,
-    type: "Pita"
+      name: "Rye Bread",
+      price: 10,
+      availability: 100,
+      type: "Pita"
     }];
   
   return (

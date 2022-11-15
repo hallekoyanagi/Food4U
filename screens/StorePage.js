@@ -4,7 +4,6 @@ import InputValue from './InputValue';
 import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-import HelpButton from '../components/HelpButton';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
@@ -21,7 +20,6 @@ const StorePage = () => {
     <View style={styles.container}>
 
       <TopHeader navigation={navigation} />
-      <HelpButton navigation={navigation} />
       <View style={styles.title_container}>
         <Text style={[styles.title, {height: height * 0.3}]}>Store Page</Text>
       </View>
