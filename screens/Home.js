@@ -33,7 +33,7 @@ const Home = () => {
     .catch(error => alert(error.message));
   }
   const findStorePressed = () => {
-      navigation.navigate("Map")
+      navigation.navigate("DefaultMap")
   }
 
   const foodPressed = () => {
