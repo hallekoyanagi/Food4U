@@ -93,6 +93,23 @@ export const styles = StyleSheet.create({
         marginRight: 180,
     },
 
+    /* Help Button */
+    help: {
+        maxHeight: 200,
+        maxWidth: 300,
+        width: '100%',
+        marginRight: 20,
+        marginBottom: 20,
+        marginLeft: 30,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    help_container: {
+            marginRight: 0,
+            marginLeft: 200,
+            marginTop: -155,
+            marginBottom: 140,
+        },
     /* Button.js */
     create_button_container: {
         width: '100%',

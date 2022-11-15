@@ -8,8 +8,6 @@ import HelpButton from '../components/HelpButton';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
-import Modal from '../components/Modal';
-
 const Home = () => {
   const navigation = useNavigation();
 
@@ -35,11 +33,14 @@ const Home = () => {
     })
     .catch(error => alert(error.message));
   }
+  const findStorePressed = () => {
+      navigation.navigate("Map")
+  }
 
   const foodPressed = () => {
     navigation.navigate("Food");
   }
-  
+
   return (
 
     <View style={styles.container}>
@@ -62,6 +63,8 @@ const Home = () => {
         <Button
          onPress={signOutPressed}
          buttonText="Sign Out"
+         onPress={findStorePressed}
+         buttonText="Find a Store Near Me"
         />
       </View>
     </View>
