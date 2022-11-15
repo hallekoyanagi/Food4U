@@ -58,7 +58,7 @@ const SignUp = () => {
     }
   }
 
-  const forgetPasswardPressed = () => {
+  const forgetPasswordPressed = () => {
     navigation.navigate('ResetPassword');
   }
   
@@ -105,8 +105,8 @@ const SignUp = () => {
          buttonText="Sign Up"
         />
         <Button
-         onPress={forgetPasswardPressed}
-         buttonText="Forget your passward?"
+         onPress={forgetPasswordPressed}
+         buttonText="Forget your password?"
          buttonType="tertiaryButton"
         />
         <Button

@@ -10,7 +10,7 @@ import ResetPassword from './screens/ResetPassword';
 import Home from './screens/Home';
 import Food from './screens/Food';
 
-// Ingore warning
+// Ignore warning
 import { LogBox } from 'react-native';
 
 // For Navigation
