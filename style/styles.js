@@ -213,4 +213,18 @@ export const styles = StyleSheet.create({
         height: '100%',
         marginBottom: 1000,
     },
+    /* Help */
+    helpTextContainer: {
+        justifyContent: 'center',
+        backgroundColor: 'white',
+        height: 200,
+        marginBottom: 20,
+        borderRadius: 7.5,
+    },
+    helpText: {
+        color: 'black',
+        fontSize: 20,
+        padding: 20,
+        fontWeight: 'bold',
+    }
 })

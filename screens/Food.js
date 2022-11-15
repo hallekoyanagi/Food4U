@@ -5,7 +5,6 @@ import TopHeader from '../components/TopHeader';
 import { styles } from '../style/styles';
 import FoodFactory from './FoodFactory';
 
-import Modal from '../components/Modal';
 // import { breadList } from "../Database/product-firebase-content.js";
 
 const Food = () => {
