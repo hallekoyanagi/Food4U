@@ -21,6 +21,8 @@ import SearchedMap from './screens/SearchedMap';
 import SearchDefaultMap from './screens/SearchDefaultMap';
 import SearchSearchedMap from './screens/SearchSearchedMap';
 
+import SearchedOrderPage from './screens/SearchedOrderPage';
+
 
 // Ignore warning
 import { LogBox } from 'react-native';
@@ -60,6 +62,9 @@ export default function App() {
         <Stack.Screen name="StorePage" component={StorePage} />
         <Stack.Screen name="DefaultStorePage" component={DefaultStorePage} />
         <Stack.Screen name="SearchedStorePage" component={SearchedStorePage} />
+
+        <Stack.Screen name="SearchedOrderPage" component={SearchedOrderPage} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

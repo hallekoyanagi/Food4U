@@ -12,6 +12,10 @@ const SearchedStorePage = () => {
 
   const navigation = useNavigation();
 
+  const orderPage = () => {
+     navigation.navigate("SearchedOrderPage")
+  }
+
   const cancelPressed = () => {
       navigation.navigate("SearchedMap")
   }
@@ -29,6 +33,11 @@ const SearchedStorePage = () => {
         <Text style={{fontSize: 20}}>Amenities: Bread, Soup</Text>
         <Text style={{fontSize: 20}}>Address: 1234 Cloverdale Ave, Victoria</Text>
         <Text style={{fontSize: 20}}>Distance: 1.5km</Text>
+      <Button
+        onPress={orderPage}
+        buttonText="Order"
+        buttonType="tertiaryButton"
+      />
       <Button
         onPress={cancelPressed}
         buttonText="Cancel"
