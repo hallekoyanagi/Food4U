@@ -36,6 +36,9 @@ const DefaultMap = () => {
   const filterPressed = () => {
     navigation.navigate("SearchDefaultMap")
   }
+  const storePressed = () => {
+    navigation.navigate("DefaultStorePage")
+  }
 
   return (
     <View style={styles.container}>
@@ -45,6 +48,11 @@ const DefaultMap = () => {
         buttonText="Filter"
       />
       <Background />
+      <Button
+        onPress={storePressed}
+        buttonText="Select Store"
+        buttonType="tertiaryButton"
+      />
     </View>
   );
 };

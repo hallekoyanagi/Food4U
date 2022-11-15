@@ -24,10 +24,10 @@ const DefaultStorePage = () => {
       <View style={styles.title_container}>
         <Text style={[styles.title, {height: height * 0.3}]}>Store Page</Text>
       </View>
-        <Text style={{fontSize: 20}}>Store Name: Crust Bakery</Text>
-        <Text style={{fontSize: 20}}>Amenities: Bread, Soup</Text>
-        <Text style={{fontSize: 20}}>Address: 1234 Cloverdale Ave, Victoria</Text>
-        <Text style={{fontSize: 20}}>Distance: 1.5km</Text>
+        <Text style={{fontSize: 20}}>Store Name: Crust McDonalds</Text>
+        <Text style={{fontSize: 20}}>Amenities: Burgers, Fries, Fast Food</Text>
+        <Text style={{fontSize: 20}}>Address: 1234 Shelbourne Ave, Victoria</Text>
+        <Text style={{fontSize: 20}}>Distance: 2.7km</Text>
       <Button
         onPress={cancelPressed}
         buttonText="Cancel"

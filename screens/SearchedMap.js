@@ -38,6 +38,9 @@ const SearchedMap = () => {
   const cancelPressed = () => {
     navigation.navigate("DefaultMap")
   }
+  const storePressed = () => {
+    navigation.navigate("SearchedStorePage")
+  }
 
   return (
     <View style={styles.container}>
@@ -52,6 +55,11 @@ const SearchedMap = () => {
         buttonType="tertiaryButton"
       />
       <Background navigation={navigation} />
+      <Button
+        onPress={storePressed}
+        buttonText="Select Store"
+        buttonType="tertiaryButton"
+      />
     </View>
   );
 };

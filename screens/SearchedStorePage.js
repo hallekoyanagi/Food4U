@@ -4,6 +4,7 @@ import InputValue from './InputValue';
 import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
+import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
 const SearchedStorePage = () => {

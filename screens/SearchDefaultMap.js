@@ -13,7 +13,7 @@ const SearchedDefaultMap = () => {
   const navigation = useNavigation();
 
   const cancelPressed = () => {
-      navigation.navigate("Map")
+      navigation.navigate("DefaultMap")
   }
 
   const breadPressed = () => {
@@ -31,6 +31,7 @@ const SearchedDefaultMap = () => {
       <Button
         onPress={breadPressed}
         buttonText="Find Bread"
+        buttonType="findStoreButton"
       />
       <Button
         onPress={cancelPressed}
