@@ -32,13 +32,22 @@ const Map = () => {
 
   const navigation = useNavigation();
 
+  const filterPressed = () => {
+    navigation.navigate("Search")
+  }
+  const cancelPressed = () => {
+    navigation.navigate("Map")
+  }
+
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
       <Button
+        onPress={filterPressed}
         buttonText="Filter"
       />
       <Button
+        onPress={cancelPressed}
         buttonText="Cancel"
         buttonType="tertiaryButton"
       />

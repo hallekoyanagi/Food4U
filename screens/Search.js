@@ -1,31 +1,48 @@
-import { Text, View, useWindowDimensions } from 'react-native';
-import React, { useState } from 'react';
+import { Text, View, Image, TextInput, TouchableOpacity, useWindowDimensions } from 'react-native';
+import React, { useState, useEffect } from 'react';
 import InputValue from './InputValue';
 import Button from './Button';
-import { auth } from '../Database/firebase';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
+import HelpButton from '../components/HelpButton';
+import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
-import { ImageBackground, StyleSheet} from "react-native";
-import image from '../assets/map.png'; // Tell webpack this JS file uses this image
-
 
 const Search = () => {
   const {height} = useWindowDimensions();
 
   const navigation = useNavigation();
 
+  const [name, setName] = useState('');
+
+  const cancelPressed = () => {
+      navigation.navigate("Map")
+  }
+
+  const breadPressed = () => {
+    navigation.navigate("SearchedMap");
+  }
+
   return (
+
     <View style={styles.container}>
+
       <TopHeader navigation={navigation} />
+      <HelpButton navigation={navigation} />
+      <View style={styles.title_container}>
+        <Text style={[styles.title, {height: height * 0.3}]}>Search</Text>
+      </View>
       <Button
-        buttonText="Search for Bread"
+        onPress={breadPressed}
+        buttonText="Find Bread"
       />
-      <Background navigation={navigation} />
+      <Button
+        onPress={cancelPressed}
+        buttonText="Cancel"
+        buttonType="tertiaryButton"
+      />
     </View>
   );
 };
 
-export default Search
-
-
+export default Search;
