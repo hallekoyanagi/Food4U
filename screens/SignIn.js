@@ -5,8 +5,6 @@ import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
 import { auth } from '../Database/firebase';
 import TopHeader from '../components/TopHeader';
-import HelpButton from '../components/HelpButton';
-import Modal from '../components/Modal';
 import { styles } from '../style/styles';
 
 const SignIn = () => {

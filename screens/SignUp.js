@@ -5,8 +5,6 @@ import Button from './Button';
 import { auth, firestore } from '../Database/firebase';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-import HelpButton from '../components/HelpButton';
-import Modal from '../components/Modal';
 import { styles } from '../style/styles';
 
 const SignUp = () => {

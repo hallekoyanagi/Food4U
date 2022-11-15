@@ -2,7 +2,6 @@ import { Text, View, useWindowDimensions, Alert, SafeAreaView, ScrollView } from
 import React, { useState } from 'react';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-import HelpButton from '../components/HelpButton';
 import { styles } from '../style/styles';
 import FoodFactory from './FoodFactory';
 
@@ -67,7 +66,6 @@ const Food = () => {
   return (
     <View style={styles.container}>
         <TopHeader navigation={navigation} />
-        <HelpButton navigation={navigation} />
         <View style={styles.foodTitleContainer}>
             <Text style={[styles.title, {height: height * 0.3}]}>Food</Text>
         </View>

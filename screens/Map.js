@@ -1,11 +1,8 @@
-import { Text, View, useWindowDimensions } from 'react-native';
-import React, { useState } from 'react';
-import InputValue from './InputValue';
+import { View } from 'react-native';
+import React from 'react';
 import Button from './Button';
-import { auth } from '../Database/firebase';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-import HelpButton from '../components/HelpButton';
 //import { styles } from '../style/styles';
 import { ImageBackground, StyleSheet} from "react-native";
 import image from '../assets/map.png'; // Tell webpack this JS file uses this image
@@ -33,9 +30,6 @@ const styles = StyleSheet.create({
 });
 
 const Map = () => {
-  const {height} = useWindowDimensions();
-
-  const [username, setUsername] = useState('');
 
   const navigation = useNavigation();
 
@@ -46,12 +40,11 @@ const Map = () => {
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
-
       <Button
         onPress={filterPressed}
         buttonText="Filter"
       />
-      <Background navigation={navigation} />
+      <Background />
     </View>
   );
 };

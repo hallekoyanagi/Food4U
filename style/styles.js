@@ -89,8 +89,10 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
-        logo_container: {
-        marginRight: 180,
+    logo_container: {
+        marginLeft: width * 0.1,
+        marginRight: width * 0.5,
+        flexDirection: "row",
     },
 
     /* Help Button */
@@ -105,11 +107,11 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
     },
     help_container: {
-            marginRight: 0,
-            marginLeft: 200,
-            marginTop: -155,
-            marginBottom: 140,
-        },
+        marginRight: 0,
+        marginLeft: 200,
+        marginTop: -155,
+        marginBottom: 140,
+    },
     /* Button.js */
     create_button_container: {
         width: '100%',
@@ -204,5 +206,11 @@ export const styles = StyleSheet.create({
     scrollViewContentContainer: {
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    /* Map */
+    mapMiddleContainer: {
+        width: '100%',
+        height: '100%',
+        marginBottom: 1000,
     },
 })
