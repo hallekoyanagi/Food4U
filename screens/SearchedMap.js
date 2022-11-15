@@ -33,7 +33,7 @@ const SearchedMap = () => {
   const navigation = useNavigation();
 
   const filterPressed = () => {
-    navigation.navigate("SearchSearchedMap")
+    navigation.navigate("SearchedSearch")
   }
   const cancelPressed = () => {
     navigation.navigate("DefaultMap")
