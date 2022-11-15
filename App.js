@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState} from "react";
 
 // Import style sheet
 import { StyleSheet } from 'react-native';
@@ -19,6 +20,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 export default function App() {
   // For Navigation
+  const [show, setShow] = useState(0);
   const Stack = createNativeStackNavigator();
 
   LogBox.ignoreAllLogs();
