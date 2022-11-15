@@ -14,10 +14,12 @@ const StorePage = () => {
   const navigation = useNavigation();
 
   const cancelPressed = () => {
-      navigation.navigate("Home")
+      navigation.navigate("SearchedMap")
   }
 
   return (
+
+
     <View style={styles.container}>
 
       <TopHeader navigation={navigation} />
