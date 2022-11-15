@@ -5,21 +5,16 @@ import Button from './Button';
 import { auth } from '../Database/firebase';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-//import { style } from '../style/styles';
+//import { styles } from '../style/styles';
 import { ImageBackground, StyleSheet} from "react-native";
 import image from '../assets/map.png'; // Tell webpack this JS file uses this image
-
-
-
-
-
-
 
 const Background = () => (
   <View style={styles.container}>
     <ImageBackground source={image} resizeMode="cover" style={styles.image}/>
   </View>
 );
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -38,10 +33,15 @@ const Map = () => {
 
   const navigation = useNavigation();
 
+  const filterPressed = () => {
+    navigation.navigate("Map")
+  }
+
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
       <Button
+        onPress={filterPressed}
         buttonText="Filter"
       />
       <Background navigation={navigation} />
