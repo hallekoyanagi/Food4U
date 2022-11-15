@@ -8,7 +8,7 @@ import HelpButton from '../components/HelpButton';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
-const Search = () => {
+const SearchSearchedMap = () => {
   const {height} = useWindowDimensions();
 
   const navigation = useNavigation();
@@ -43,5 +43,5 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchSearchedMap;
 

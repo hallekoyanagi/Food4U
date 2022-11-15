@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Map = () => {
+const SearchedMap = () => {
   const {height} = useWindowDimensions();
 
   const [username, setUsername] = useState('');
@@ -33,10 +33,10 @@ const Map = () => {
   const navigation = useNavigation();
 
   const filterPressed = () => {
-    navigation.navigate("Search")
+    navigation.navigate("SearchSearchedMap")
   }
   const cancelPressed = () => {
-    navigation.navigate("Map")
+    navigation.navigate("DefaultMap")
   }
 
   return (
@@ -56,6 +56,6 @@ const Map = () => {
   );
 };
 
-export default Map
+export default SearchedMap
 
 

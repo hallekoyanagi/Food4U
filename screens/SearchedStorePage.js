@@ -8,7 +8,7 @@ import HelpButton from '../components/HelpButton';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
-const StorePage = () => {
+const SearchedStorePage = () => {
   const {height} = useWindowDimensions();
 
   const navigation = useNavigation();
@@ -40,4 +40,4 @@ const StorePage = () => {
   );
 };
 
-export default StorePage;
+export default SearchedStorePage;

@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const Map = () => {
+const DefaultMap = () => {
 
   const navigation = useNavigation();
 
   const filterPressed = () => {
-    navigation.navigate("StorePage")
+    navigation.navigate("SearchDefaultMap")
   }
 
   return (
@@ -49,6 +49,6 @@ const Map = () => {
   );
 };
 
-export default Map
+export default DefaultMap
 
 

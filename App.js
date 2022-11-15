@@ -9,14 +9,21 @@ import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
 import ResetPassword from './screens/ResetPassword';
 import Home from './screens/Home';
-import Map from './screens/Map';
 import Food from './screens/Food';
+
 import StorePage from './screens/StorePage';
+import SearchedStorePage from './screens/SearchedStorePage';
+import DefaultStorePage from './screens/DefaultStorePage';
+
+import DefaultMap from './screens/DefaultMap';
+import SearchedMap from './screens/SearchedMap';
+
+import SearchDefaultMap from './screens/SearchDefaultMap';
+import SearchSearchedMap from './screens/SearchSearchedMap';
+
+
 // Ignore warning
 import { LogBox } from 'react-native';
-import SearchedMap from './screens/SearchedMap';
-import Search from './screens/Search';
-
 // For Navigation
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -43,10 +50,16 @@ export default function App() {
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
         <Stack.Screen name="Food" component={Food} />
-        <Stack.Screen name="Map" component={Map} />
+
+        <Stack.Screen name="DefaultMap" component={DefaultMap} />
         <Stack.Screen name="SearchedMap" component={SearchedMap} />
-        <Stack.Screen name="Search" component={Search} />
+
+        <Stack.Screen name="SearchDefaultMap" component={SearchDefaultMap} />
+        <Stack.Screen name="SearchSearchedMap" component={SearchSearchedMap} />
+
         <Stack.Screen name="StorePage" component={StorePage} />
+        <Stack.Screen name="DefaultStorePage" component={DefaultStorePage} />
+        <Stack.Screen name="SearchedStorePage" component={SearchedStorePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

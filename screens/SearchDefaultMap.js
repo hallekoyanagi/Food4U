@@ -7,7 +7,7 @@ import TopHeader from '../components/TopHeader';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
-const Search = () => {
+const SearchedDefaultMap = () => {
   const {height} = useWindowDimensions();
 
   const navigation = useNavigation();
@@ -41,5 +41,5 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchedDefaultMap;
 
