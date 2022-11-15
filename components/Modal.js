@@ -4,6 +4,9 @@ const Modal =  props => {
     if (!props.show){
         return null
     }
+    if (props.show){ // This exists because it causes a text error when live. Still trying to fix. Works outside of app
+        return null // When fully implemented, this if clause wil be removed
+    }
     return (
         <div className="modal">
             <div className="modalcontent">
