@@ -18,8 +18,8 @@ import DefaultStorePage from './screens/DefaultStorePage';
 import DefaultMap from './screens/DefaultMap';
 import SearchedMap from './screens/SearchedMap';
 
-import SearchDefaultMap from './screens/SearchDefaultMap';
-import SearchSearchedMap from './screens/SearchSearchedMap';
+import DefaultSearch from './screens/DefaultSearch';
+import SearchedSearch from './screens/SearchedSearch';
 
 
 // Ignore warning
@@ -54,8 +54,8 @@ export default function App() {
         <Stack.Screen name="DefaultMap" component={DefaultMap} />
         <Stack.Screen name="SearchedMap" component={SearchedMap} />
 
-        <Stack.Screen name="SearchDefaultMap" component={SearchDefaultMap} />
-        <Stack.Screen name="SearchSearchedMap" component={SearchSearchedMap} />
+        <Stack.Screen name="DefaultSearch" component={DefaultSearch} />
+        <Stack.Screen name="SearchedSearch" component={SearchedSearch} />
 
         <Stack.Screen name="StorePage" component={StorePage} />
         <Stack.Screen name="DefaultStorePage" component={DefaultStorePage} />

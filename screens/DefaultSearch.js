@@ -7,13 +7,13 @@ import TopHeader from '../components/TopHeader';
 import { auth, firestore } from '../Database/firebase';
 import { styles } from '../style/styles';
 
-const SearchSearchedMap = () => {
+const SearchedDefaultMap = () => {
   const {height} = useWindowDimensions();
 
   const navigation = useNavigation();
 
   const cancelPressed = () => {
-      navigation.navigate("SearchedMap")
+      navigation.navigate("DefaultMap")
   }
 
   const breadPressed = () => {
@@ -41,5 +41,5 @@ const SearchSearchedMap = () => {
   );
 };
 
-export default SearchSearchedMap;
+export default SearchedDefaultMap;
 

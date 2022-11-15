@@ -34,7 +34,7 @@ const DefaultMap = () => {
   const navigation = useNavigation();
 
   const filterPressed = () => {
-    navigation.navigate("SearchDefaultMap")
+    navigation.navigate("DefaultSearch")
   }
   const storePressed = () => {
     navigation.navigate("DefaultStorePage")
