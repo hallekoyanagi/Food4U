@@ -125,6 +125,17 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    store_item: {
+        alignItems: 'center',
+        fontSize: 22,
+        fontWeight: 'bold',
+        padding: 20,
+    },
+    store_items_container: {
+        alignItems: 'flex-start',
+        marginTop: -125,
+        width: '100%',
+    },
     button_container: {
         alignItems: 'center',
         padding: 50,

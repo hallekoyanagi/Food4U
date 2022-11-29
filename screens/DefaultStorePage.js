@@ -1,4 +1,4 @@
-import { Text, View, Image, TextInput, TouchableOpacity, useWindowDimensions } from 'react-native';
+import { Text, View, Image, TextInput, TouchableOpacity, useWindowDimensions, SafeAreaView, ScrollView } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import InputValue from './InputValue';
 import Button from './Button';
@@ -23,11 +23,11 @@ const DefaultStorePage = () => {
 
 
 
-  const item_1_1 = new Item(7, 5, "Big Mac", store_1);
-  const item_1_2 = new Item(7, 5, "Lg Fries", store_1);
-  const item_1_3 = new Item(7, 5, "Sml Fries", store_1);
-  const item_1_4 = new Item(7, 5, "McChicken", store_1);
-  const item_1_5 = new Item(7, 5, "Fountian Drink", store_1);
+  const item_1_1 = new Item('5.00', 2, "Big Mac", store_1);
+  const item_1_2 = new Item('2.00', 7, "Lg Fries", store_1);
+  const item_1_3 = new Item('1.50', 4, "Sml Fries", store_1);
+  const item_1_4 = new Item('3.50', 5, "McChicken", store_1);
+  const item_1_5 = new Item('0.50', 3, "Pop", store_1);
 
   items_1.push(item_1_1, item_1_2, item_1_3, item_1_4, item_1_5);
 
@@ -55,6 +55,13 @@ const DefaultStorePage = () => {
           buttonText="Cancel"
           buttonType="tertiaryButton"
         />
+      </View>
+      <View style = {styles.store_items_container}>
+        {items_1.map((item) => {
+            return(
+                <Text style = {styles.store_item}>{item.name}, Availability: {item.availability}, ${item.price}</Text>
+            );
+        })}
       </View>
     </View>
   );

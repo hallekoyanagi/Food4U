@@ -17,7 +17,7 @@ const Food = () => {
       name: "Baguette",
       price: 7,
       availability: 80,
-      type: "bread"
+  type: "bread"
     },
     {
       name: "Sourdough",

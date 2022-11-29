@@ -27,10 +27,10 @@ const SearchedStorePage = () => {
 
 
 
-  const item_2_1 = new Item(7, 5, "Baguette", store_2);
-  const item_2_2 = new Item(7, 5, "Ham and Cheese Sandwich", store_2);
-  const item_2_3 = new Item(7, 5, "Sourdough", store_2);
-  const item_2_4 = new Item(7, 5, "Orange Juice", store_2);
+  const item_2_1 = new Item('5.00', 17, "Baguette", store_2);
+  const item_2_2 = new Item('7.00', 4, "Ham and Cheese Sandwich", store_2);
+  const item_2_3 = new Item('3.50', 6, "Sourdough", store_2);
+  const item_2_4 = new Item('5.00', 35, "Orange Juice", store_2);
 
   items_2.push(item_2_1, item_2_2, item_2_3, item_2_4);
 
@@ -58,6 +58,13 @@ const SearchedStorePage = () => {
           buttonText="Cancel"
           buttonType="tertiaryButton"
         />
+      </View>
+      <View style = {styles.store_items_container}>
+          {items_2.map((item) => {
+              return(
+                  <Text style = {styles.store_item}>{item.name}, Availability: {item.availability}, ${item.price}</Text>
+              );
+          })}
       </View>
     </View>
   );
