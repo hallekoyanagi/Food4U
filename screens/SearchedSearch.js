@@ -48,7 +48,7 @@ const SearchedSearch = () => {
       <Button
         onPress={cancelPressed}
         buttonText="Cancel"
-        buttonType="tertiaryButton"
+        buttonType="cancelButton"
       />
     </View>
   );

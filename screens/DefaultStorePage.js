@@ -50,11 +50,6 @@ const DefaultStorePage = () => {
         <Text style={{fontSize: 20}}>Address: {store_1.address}</Text>
         <Text style={{fontSize: 20}}>Distance: {store_1.distance}km</Text>
         <Text style={{fontSize: 20}}>Amenities: Burgers, Fries, Fast Food</Text>
-        <Button
-          onPress={cancelPressed}
-          buttonText="Cancel"
-          buttonType="tertiaryButton"
-        />
       </View>
       <View style = {styles.store_items_container}>
         {items_1.map((item) => {
@@ -63,6 +58,11 @@ const DefaultStorePage = () => {
             );
         })}
       </View>
+      <Button
+        onPress={cancelPressed}
+        buttonText="Cancel"
+        buttonType="cancelButton"
+      />
     </View>
   );
 };

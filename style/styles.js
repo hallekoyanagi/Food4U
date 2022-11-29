@@ -20,12 +20,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         padding: 20,
     },
-    store_page_title: {
-        alignItems: 'center',
-        fontSize: 30,
-        fontWeight: 'bold',
-        marginTop: -20
-    },
+
     title_container: {
         flexDirection: "row",
         height: height*0.15,
@@ -45,55 +40,7 @@ export const styles = StyleSheet.create({
         borderRadius: 20,
         marginTop: -height*0.15,
     },
-    store_picture: {
-        maxHeight: 400,
-        maxWidth: '100%',
-        minHeight: 400,
-        marginTop: -130,
-        marginBottom: 50,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    store_picture_container: {
-        alignItems: 'center',
-        alignSelf: 'center',
-        height: 40,
-        width: width+20,
-        marginTop: -height*0.15,
-    },
-    store_description_container: {
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        //height: 40,
-        borderColor: '#7BB055',
-        borderWidth: 1,
-        borderRadius: 5,
-        width: '100%',
-        paddingHorizontal: 10,
-        marginVertical: 150,
-        //borderRadius: 20,
-        //marginTop: -height*0.15,
-    },
-    store_picture: {
-        maxHeight: 400,
-        maxWidth: '100%',
-        minHeight: 400,
-        marginTop: -130,
-        marginBottom: 50,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    store_item: {
-        alignItems: 'center',
-        fontSize: 22,
-        fontWeight: 'bold',
-        padding: 20,
-    },
-    store_items_container: {
-        alignItems: 'flex-start',
-        marginTop: -125,
-        width: '100%',
-    },
+
     button_container: {
         alignItems: 'center',
         padding: 50,
@@ -213,6 +160,9 @@ export const styles = StyleSheet.create({
     create_button_container_tertiaryButton: {
         height: 35,
     },
+    create_button_container_cancelButton: {
+        height: 45,
+    },
     button_text: {
         height: 35,
         fontWeight: 'bold',
@@ -235,6 +185,10 @@ export const styles = StyleSheet.create({
     },
     button_text_tertiaryButton: {
         color: '#7BB055',
+        fontSize: 15,
+    },
+    button_text_cancelButton: {
+        color: '#fc4736',
         fontSize: 15,
     },
 
@@ -269,42 +223,34 @@ export const styles = StyleSheet.create({
     },
     /* Map */
     map_container: {
-        maxHeight: 250,
-        minHeight: 250,
-        marginTop: 350,
+        height: height*0.01,
         alignItems: "center",
         justifyContent: "center",
+        marginTop: height*0.40,
+    },
+    map: {
+        height:height*1.15,
+        width:width*1.15,
     },
     map_button_container: {
         alignItems: 'center',
         justifyContent: 'center',
         //height: 40,
         width: '100%',
-        paddingHorizontal: 10,
-        marginVertical: 30,
+        marginVertical: height*0.25
         //borderRadius: 20,
         //marginTop: -height*0.15,
-    },
-    searched_map_container: {
-        maxHeight: 250,
-        minHeight: 250,
-        marginTop: 375,
-        alignItems: "center",
-        justifyContent: "center",
     },
     searched_map_button_container: {
         alignItems: 'center',
         justifyContent: 'center',
-        //height: 40,
         borderColor: '#7BB055',
         borderWidth: 1,
         borderRadius: 5,
         width: '100%',
         paddingHorizontal: 10,
-        marginVertical: -30,
+        marginVertical: height*0.2,
         backgroundColor: 'white',
-        //borderRadius: 20,
-        //marginTop: -height*0.15,
     },
     mapMiddleContainer: {
         width: '100%',
@@ -324,5 +270,63 @@ export const styles = StyleSheet.create({
         fontSize: 20,
         padding: 20,
         fontWeight: 'bold',
-    }
+    },
+    /* Store Page */
+    store_page_title: {
+        alignItems: 'center',
+        fontSize: 30,
+        fontWeight: 'bold',
+        marginTop: -20
+    },
+    store_picture: {
+        maxHeight: 400,
+        maxWidth: '100%',
+        minHeight: 400,
+        marginTop: -130,
+        marginBottom: 50,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    store_picture_container: {
+        alignItems: 'center',
+        alignSelf: 'center',
+        height: 40,
+        width: width+20,
+        marginTop: -height*0.15,
+    },
+    store_description_container: {
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        //height: 40,
+        borderColor: '#7BB055',
+        borderWidth: 1,
+        borderRadius: 5,
+        width: '100%',
+        paddingHorizontal: 10,
+        marginVertical: 150,
+        //borderRadius: 20,
+        //marginTop: -height*0.15,
+    },
+    store_picture: {
+        maxHeight: 400,
+        maxWidth: '100%',
+        minHeight: 400,
+        marginTop: -130,
+        marginBottom: 50,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    store_item: {
+        alignItems: 'center',
+        fontSize: 18,
+        padding: 10,
+    },
+    store_items_container: {
+        alignItems: 'flex-start',
+        marginTop: -145,
+        width: '100%',
+        borderWidth: 1,
+        borderRadius: 5,
+        borderColor: '#00BFFF',
+    },
 })

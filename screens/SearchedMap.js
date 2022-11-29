@@ -24,7 +24,7 @@ const SearchedMap = () => {
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
-      <View style={styles.searched_map_container}>
+      <View style={styles.map_container}>
         <Pressable onPress={storePressed}>
             <Image
               style={[styles.map]}
@@ -41,7 +41,7 @@ const SearchedMap = () => {
           <Button
             onPress={cancelPressed}
             buttonText="Cancel Filter"
-            buttonType="tertiaryButton"
+            buttonType="cancelButton"
           />
       </View>
     </View>

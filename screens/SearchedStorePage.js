@@ -53,11 +53,6 @@ const SearchedStorePage = () => {
         <Text style={{fontSize: 20}}>Address: {store_2.address}</Text>
         <Text style={{fontSize: 20}}>Distance: {store_2.distance}km</Text>
         <Text style={{fontSize: 20}}>Amenities: Soup, Sandwiches, Bread</Text>
-        <Button
-          onPress={cancelPressed}
-          buttonText="Cancel"
-          buttonType="tertiaryButton"
-        />
       </View>
       <View style = {styles.store_items_container}>
           {items_2.map((item) => {
@@ -66,6 +61,11 @@ const SearchedStorePage = () => {
               );
           })}
       </View>
+      <Button
+        onPress={cancelPressed}
+        buttonText="Cancel"
+        buttonType="cancelButton"
+      />
     </View>
   );
 };
