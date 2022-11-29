@@ -9,6 +9,11 @@ export const styles = StyleSheet.create({
         // justifyContent: 'center',
         padding: 20,
     },
+    description: {
+        alignItems: 'center',
+        fontSize: 20,
+        padding: 20,
+    },
     title: {
         alignItems: 'center',
         fontSize: 30,
@@ -26,7 +31,7 @@ export const styles = StyleSheet.create({
     },
     middle_container: {
         alignItems: 'center',
-        padding: 50,
+        padding: 60,
         width: '100%',
         height: 40,
         paddingHorizontal: 10,
@@ -34,6 +39,28 @@ export const styles = StyleSheet.create({
         borderRadius: 20,
         marginTop: -height*0.15,
     },
+    store_picture_container: {
+        alignItems: 'center',
+        alignSelf: 'flex-end',
+        height: 40,
+        width: width+20,
+        marginTop: -height*0.15,
+    },
+    store_description_container: {
+        alignItems: 'flex-start',
+        justifyContent: 'center',
+        //height: 40,
+        borderColor: '#7BB055',
+        borderWidth: 1,
+        borderRadius: 5,
+
+        width: '100%',
+        paddingHorizontal: 10,
+        marginVertical: 100,
+        //borderRadius: 20,
+        //marginTop: -height*0.15,
+    },
+
     button_container: {
         alignItems: 'center',
         padding: 50,

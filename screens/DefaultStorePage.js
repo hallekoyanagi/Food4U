@@ -38,20 +38,25 @@ const DefaultStorePage = () => {
 
       <TopHeader navigation={navigation} />
       <View style={styles.title_container}>
-        <Text style={[styles.title, {height: height * 0.3}]}>Store Page</Text>
+        <Text style={[styles.title, {height: height * 0.3}]}>{store_1.name}</Text>
       </View>
-        <Text style={{fontSize: 20}}>Store Name: {store_1.name} </Text>
-        <Text style={{fontSize: 20}}>Amenities: Burgers, Fries, Fast Food</Text>
+      <View style={styles.store_picture_container}>
+        <Image
+          style={[styles.logo, {height: height * 0.12}]}
+          source = {require("../assets/mcdonalds.jpg")}
+          resizeMode="stretch"
+        />
+      </View>
+      <View style={styles.store_description_container}>
         <Text style={{fontSize: 20}}>Address: {store_1.address}</Text>
         <Text style={{fontSize: 20}}>Distance: {store_1.distance}km</Text>
-//        for(let i = 0;i < 5; i++){
-//          <Text style={{fontSize: 20}}<{items_1[i].name}</Text>
-//        }
-      <Button
-        onPress={cancelPressed}
-        buttonText="Cancel"
-        buttonType="tertiaryButton"
-      />
+        <Text style={{fontSize: 20}}>Amenities: Burgers, Fries, Fast Food</Text>
+        <Button
+          onPress={cancelPressed}
+          buttonText="Cancel"
+          buttonType="tertiaryButton"
+        />
+      </View>
     </View>
   );
 };
