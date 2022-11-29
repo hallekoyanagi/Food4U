@@ -20,6 +20,12 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
         padding: 20,
     },
+    store_page_title: {
+        alignItems: 'center',
+        fontSize: 30,
+        fontWeight: 'bold',
+        marginTop: -20
+    },
     title_container: {
         flexDirection: "row",
         height: height*0.15,
@@ -39,9 +45,18 @@ export const styles = StyleSheet.create({
         borderRadius: 20,
         marginTop: -height*0.15,
     },
+    store_picture: {
+        maxHeight: 400,
+        maxWidth: '100%',
+        minHeight: 400,
+        marginTop: -130,
+        marginBottom: 50,
+        alignItems: "center",
+        justifyContent: "center",
+    },
     store_picture_container: {
         alignItems: 'center',
-        alignSelf: 'flex-end',
+        alignSelf: 'center',
         height: 40,
         width: width+20,
         marginTop: -height*0.15,
@@ -53,10 +68,9 @@ export const styles = StyleSheet.create({
         borderColor: '#7BB055',
         borderWidth: 1,
         borderRadius: 5,
-
         width: '100%',
         paddingHorizontal: 10,
-        marginVertical: 100,
+        marginVertical: 150,
         //borderRadius: 20,
         //marginTop: -height*0.15,
     },

@@ -35,16 +35,15 @@ const DefaultStorePage = () => {
   return (
 
     <View style={styles.container}>
-
       <TopHeader navigation={navigation} />
       <View style={styles.title_container}>
-        <Text style={[styles.title, {height: height * 0.3}]}>{store_1.name}</Text>
+        <Text style={[styles.store_page_title, {height: height * 0.3}]}>{store_1.name}</Text>
       </View>
       <View style={styles.store_picture_container}>
         <Image
-          style={[styles.logo, {height: height * 0.12}]}
+          style={[styles.store_picture, {height: height * 0.12}]}
           source = {require("../assets/mcdonalds.jpg")}
-          resizeMode="stretch"
+          resizeMode="contain"
         />
       </View>
       <View style={styles.store_description_container}>
