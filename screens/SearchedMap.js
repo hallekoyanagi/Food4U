@@ -1,65 +1,52 @@
-import { Text, View, useWindowDimensions } from 'react-native';
-import React, { useState } from 'react';
-import InputValue from './InputValue';
+import { View, Image } from 'react-native';
+import React from 'react';
 import Button from './Button';
-import { auth } from '../Database/firebase';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-//import { style } from '../style/styles';
+import { styles } from '../style/styles';
 import { ImageBackground, StyleSheet} from "react-native";
-import image from '../assets/bread_map.png'; // Tell webpack this JS file uses this image
-
-const Background = () => (
-  <View style={styles.container}>
-    <ImageBackground source={image} resizeMode="cover" style={styles.image}/>
-  </View>
-);
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center"
-  },
-  image: {
-    flex: 1,
-    justifyContent: "center"
-  },
-});
+import image from '../assets/map.png'; // Tell webpack this JS file uses this image
 
 const SearchedMap = () => {
-  const {height} = useWindowDimensions();
-
-  const [username, setUsername] = useState('');
 
   const navigation = useNavigation();
 
   const filterPressed = () => {
     navigation.navigate("SearchedSearch")
   }
-  const cancelPressed = () => {
-    navigation.navigate("DefaultMap")
-  }
   const storePressed = () => {
     navigation.navigate("SearchedStorePage")
+  }
+  const cancelPressed = () => {
+    navigation.navigate("DefaultMap")
   }
 
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
-      <Button
-        onPress={filterPressed}
-        buttonText="Filter"
-      />
-      <Button
-        onPress={cancelPressed}
-        buttonText="Cancel"
-        buttonType="tertiaryButton"
-      />
-      <Background navigation={navigation} />
-      <Button
-        onPress={storePressed}
-        buttonText="Select Store"
-        buttonType="tertiaryButton"
-      />
+      <View style={styles.searched_map_container}>
+        <Image
+          style={[styles.map]}
+          source = {require("../assets/bread_map.png")}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={styles.searched_map_button_container}>
+          <Button
+            onPress={filterPressed}
+            buttonText="Filter"
+          />
+          <Button
+            onPress={cancelPressed}
+            buttonText="Cancel Filter"
+            buttonType="tertiaryButton"
+          />
+          <Button
+            onPress={storePressed}
+            buttonText="Select Store"
+            buttonType="tertiaryButton"
+          />
+      </View>
     </View>
   );
 };

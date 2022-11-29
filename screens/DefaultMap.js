@@ -1,33 +1,11 @@
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 import React from 'react';
 import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
 import TopHeader from '../components/TopHeader';
-//import { styles } from '../style/styles';
+import { styles } from '../style/styles';
 import { ImageBackground, StyleSheet} from "react-native";
 import image from '../assets/map.png'; // Tell webpack this JS file uses this image
-
-const Background = () => (
-  <View style={styles.container}>
-    <ImageBackground source={image} resizeMode="cover" style={styles.image}/>
-  </View>
-);
-
-const styles = StyleSheet.create({
-  container1: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  container: {
-    flex: 1,
-    justifyContent: "center",
-  },
-  image: {
-    flex: 1,
-    justifyContent: "center"
-  },
-});
 
 const DefaultMap = () => {
 
@@ -43,16 +21,24 @@ const DefaultMap = () => {
   return (
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
-      <Button
-        onPress={filterPressed}
-        buttonText="Filter"
-      />
-      <Background />
-      <Button
-        onPress={storePressed}
-        buttonText="Select Store"
-        buttonType="tertiaryButton"
-      />
+      <View style={styles.map_container}>
+        <Image
+          style={[styles.map]}
+          source = {require("../assets/map.png")}
+          resizeMode="contain"
+        />
+      </View>
+      <View style={styles.map_button_container}>
+          <Button
+            onPress={filterPressed}
+            buttonText="Filter"
+          />
+          <Button
+            onPress={storePressed}
+            buttonText="Select Store"
+            buttonType="tertiaryButton"
+          />
+      </View>
     </View>
   );
 };
