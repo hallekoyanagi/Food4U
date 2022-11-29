@@ -26,12 +26,25 @@ const SearchedSearch = () => {
 
       <TopHeader navigation={navigation} />
       <View style={styles.title_container}>
-        <Text style={[styles.title, {height: height * 0.3}]}>Search</Text>
+        <Text style={[styles.title, {height: height * 0.3}]}>Filter</Text>
       </View>
       <Button
         onPress={breadPressed}
         buttonText="Find Bread"
       />
+      <Button
+        onPress={breadPressed}
+        buttonText="Find Bread"
+      />
+      <Button
+        onPress={breadPressed}
+        buttonText="Find Bread"
+      />
+      <Button
+        onPress={breadPressed}
+        buttonText="Find Bread"
+      />
+
       <Button
         onPress={cancelPressed}
         buttonText="Cancel"

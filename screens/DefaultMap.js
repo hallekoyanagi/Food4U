@@ -1,4 +1,4 @@
-import { View, Image } from 'react-native';
+import { View, Image, Pressable } from 'react-native';
 import React from 'react';
 import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
@@ -22,21 +22,18 @@ const DefaultMap = () => {
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
       <View style={styles.map_container}>
-        <Image
-          style={[styles.map]}
-          source = {require("../assets/map.png")}
-          resizeMode="contain"
-        />
+        <Pressable onPress={storePressed}>
+            <Image
+              style={[styles.map]}
+              source = {require("../assets/map.png")}
+              resizeMode="contain"
+            />
+        </Pressable>
       </View>
       <View style={styles.map_button_container}>
           <Button
             onPress={filterPressed}
             buttonText="Filter"
-          />
-          <Button
-            onPress={storePressed}
-            buttonText="Select Store"
-            buttonType="tertiaryButton"
           />
       </View>
     </View>

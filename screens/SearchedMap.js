@@ -1,4 +1,4 @@
-import { View, Image } from 'react-native';
+import { View, Image, Pressable } from 'react-native';
 import React from 'react';
 import Button from './Button';
 import { useNavigation } from "@react-navigation/native";
@@ -25,11 +25,13 @@ const SearchedMap = () => {
     <View style={styles.container}>
       <TopHeader navigation={navigation} />
       <View style={styles.searched_map_container}>
-        <Image
-          style={[styles.map]}
-          source = {require("../assets/bread_map.png")}
-          resizeMode="contain"
-        />
+        <Pressable onPress={storePressed}>
+            <Image
+              style={[styles.map]}
+              source = {require("../assets/bread_map.png")}
+              resizeMode="contain"
+            />
+        </Pressable>
       </View>
       <View style={styles.searched_map_button_container}>
           <Button
@@ -39,11 +41,6 @@ const SearchedMap = () => {
           <Button
             onPress={cancelPressed}
             buttonText="Cancel Filter"
-            buttonType="tertiaryButton"
-          />
-          <Button
-            onPress={storePressed}
-            buttonText="Select Store"
             buttonType="tertiaryButton"
           />
       </View>
